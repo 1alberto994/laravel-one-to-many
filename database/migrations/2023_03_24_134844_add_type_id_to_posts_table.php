@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->unsignedBigInteger('type_id')->nullable()->after('published');
+            $table->unsignedBigInteger('type_id')->nullable();
 
             $table->foreign('type_id')
                 ->references('id')

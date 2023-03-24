@@ -11,7 +11,7 @@ use App\Models\Type;
 // Helpers
 use Illuminate\Support\Str;
 
-class CategorySeeder extends Seeder
+class TypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -37,7 +37,7 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($types as $type) {
-            $newCategory = Type::create([
+            $newType = Type::create([
                 'name' => $type,
                 'slug' => Str::slug($type),
             ]);

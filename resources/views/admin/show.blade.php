@@ -18,6 +18,16 @@
                     </div>
                 </div>
             </div>
+            <h3>
+                    Type:
+                    @if ($post->type)
+                        <a href="{{ route('admin.typeas.show', $post->type->id) }}">
+                            {{ $post->type->name }}
+                        </a>
+                    @else
+                        Nessuna categoria
+                    @endif
+                </h3>
         </div>
                 @if ($post->img)
                     <div>
